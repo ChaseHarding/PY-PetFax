@@ -11,10 +11,16 @@ h1 {
     
 }
 
+.pet-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .pet-card {
     border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 0 10px;
     margin: 10px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
@@ -22,10 +28,14 @@ h1 {
 }
 
 .pet-card h2 {
+    width: 100%;
     margin-top: 0;
 }
 
 .pet-card img {
     max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
 }
 

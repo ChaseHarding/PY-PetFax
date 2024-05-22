@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetFax</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>PetFax</h1>
-    {% for pet in pets %}
-            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-            <div class="pet-card">
-                <h2>{{ pet.pet_name }}</h2>
-                <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
-                <a href="{{ pet.pet_id }}">Learn more</a>
-            </div>
-    {% endfor %}
+    <div class="pet-card-container">
+        {% for pet in pets %}
+                <div class="pet-card">
+                    <h2>{{ pet.pet_name }}</h2>
+                    <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+                    <a href="{{ pet.pet_id }}">Learn more</a>
+                </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
