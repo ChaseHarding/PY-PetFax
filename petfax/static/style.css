@@ -21,4 +21,11 @@ h1 {
     width: 300px;
 }
 
+.pet-card h2 {
+    margin-top: 0;
+}
+
+.pet-card img {
+    max-width: 100%;
+}
 
