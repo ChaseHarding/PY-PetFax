@@ -6,11 +6,14 @@
     <title>PetFax</title>
 </head>
 <body>
-    <h1>Welcome to PetFax</h1>
+    <h1>PetFax</h1>
     {% for pet in pets %}
-        <h2>{{ pet.pet_name }}</h2>
-        <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
-        <a href="{{ pet.pet_id }}">Learn more</a>
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            <div class="pet-card">
+                <h2>{{ pet.pet_name }}</h2>
+                <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+                <a href="{{ pet.pet_id }}">Learn more</a>
+            </div>
     {% endfor %}
 </body>
 </html>
