@@ -8,8 +8,6 @@ facts = [
 ]
 bp = Blueprint('fact', __name__, url_prefix="/facts")
 
-# Create a route for /facts and a route for /facts/new
-
 @bp.route('/')
 def show_facts():
     return render_template('facts.html', facts=facts)
