@@ -1,11 +1,19 @@
 from flask import (Blueprint, render_template)
 import json
 
+facts = [
+    {"name": "Dog", "fact": "Dogs nose prints are unique, much like a person's fingerprint."},
+    {"name": "Cat", "fact": "Cats have 230 bones, while humans only have 206"},
+    {"name": "Parrot", "fact": "The smallest parrot in the world is three inches long."}
+]
 bp = Blueprint('fact', __name__, url_prefix="/facts")
-fact = json.load(open('facts.json'))
 
 # Create a route for /facts and a route for /facts/new
 
+@bp.route('/')
+def show_facts():
+    return render_template('facts.html', facts=facts)
+
 @bp.route('/new')
-def index():
-    return render_template('new.html', fact=fact)
+def new_fact():
+    return render_template('new.html')
