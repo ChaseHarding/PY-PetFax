@@ -5,7 +5,7 @@ def create_app():
     app.config['TEMPLATES_AUTO_RELOAD'] = True
 
     @app.route('/')
-    def hello():
+    def Index():
         return 'Hello, PetFax!'
 
     from . import pet
