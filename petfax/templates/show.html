@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to Show</h1>
-    <h2>{{ pet.pet_name }}</h2>
-    <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
-    <a href="/pets">Go back</a>
+    <h1>Welcome to {{ pet.pet_name }}'s Page</h1>
+    <div class="pet-card-container">
+        <div class="pet-card">
+            <h2>{{ pet.pet_name }}</h2>
+            <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+            <a href="/pets">Go back</a>
+        </div>
+    </div>
 </body>
 </html>
