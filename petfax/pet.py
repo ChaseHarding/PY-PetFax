@@ -23,7 +23,10 @@ def index():
 def show(id):
     pets = load_pets()
     # pet = pets[id - 1]
-    pet = next((pet for pet in pets if pet['pet_id'] == str(id)), None)
+    print(f"Loaded pets: {pets}")
+    print(f"Requested pet id: {id}")
+    pet = next((pet for pet in pets if pet['pet_id'] == id), None)
+    print(f"Found pet: {pet}")
     if pet is None:
         return "Pet not found", 404
     return render_template('pets/show.html', pet=pet)
