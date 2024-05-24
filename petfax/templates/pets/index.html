@@ -12,8 +12,8 @@
         {% for pet in pets %}
                 <div class="pet-card">
                     <h2>{{ pet.pet_name }}</h2>
-                    <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
-                    <a href="{{ pet.pet_id }}">Learn more</a>
+                    <img src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}"/>
+                    <a href="{{ url_for('pet.show', id=pet.pet_id) }}">Learn more</a>
                 </div>
         {% endfor %}
     </div>

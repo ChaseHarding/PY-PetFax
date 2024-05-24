@@ -1,10 +1,14 @@
 from flask import (Blueprint, render_template, request)
 import json
 
-pets = json.load(open('pets.json'))
+# pets = json.load(open('pets.json'))
 bp = Blueprint('pet', __name__, url_prefix="/pets")
 
-print(pets)
+# print(pets)
+
+def load_pets():
+    with open('pets.json') as f:
+        return json.load(f)
 
 @bp.route('/')
 def index():
@@ -17,5 +21,9 @@ def index():
 
 @bp.route('/<int:id>')
 def show(id):
-    pet = pets[id - 1]
+    pets = load_pets()
+    # pet = pets[id - 1]
+    pet = next((pet for pet in pets if pet['pet_id'] == str(id)), None)
+    if pet is None:
+        return "Pet not found", 404
     return render_template('pets/show.html', pet=pet)
