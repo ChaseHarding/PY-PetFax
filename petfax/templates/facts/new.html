@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
 </head>
 <body>
+    <h1 class="form-heading">Have a fun Fact? Let us know!</h1>
     <div class="form-container">
-        <h1 class="form-heading">Have a fun Fact? Let us know!</h1>
         <form action="/facts" method="POST">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" required>
