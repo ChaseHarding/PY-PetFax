@@ -25,9 +25,9 @@ body {
 .form-container label {
     display: block;
     margin-bottom: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #555;
-    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f9421d;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
 }
