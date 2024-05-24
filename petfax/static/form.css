@@ -6,7 +6,7 @@ body {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #fdcfb9;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
@@ -16,7 +16,7 @@ body {
 .form-heading {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 200px;
-    color: white;
+    color: #ffaa3c;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -25,6 +25,8 @@ body {
 .form-container label {
     display: block;
     margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
